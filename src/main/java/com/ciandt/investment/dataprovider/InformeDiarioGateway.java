@@ -1,8 +1,5 @@
 package com.ciandt.investment.dataprovider;
 
-import com.ciandt.investment.core.domain.InformeDiario;
-import com.ciandt.investment.core.usecase.InformeDiarioBoundary;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -12,6 +9,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.ciandt.investment.core.domain.InformeDiario;
+import com.ciandt.investment.core.usecase.InformeDiarioBoundary;
 
 public class InformeDiarioGateway implements InformeDiarioBoundary {
 

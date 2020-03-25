@@ -70,4 +70,8 @@ public class InformeDiario {
     public Integer getNumeroCotistas() {
         return numeroCotistas;
     }
+    
+    public BigDecimal getCaptacaoLiquida() {
+    	return captacaoDia.subtract(resgateDia);
+    }
 }
