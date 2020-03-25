@@ -13,7 +13,7 @@ public class InformeDiarioGatewayTest {
     public void sanity() {
 
         InformeDiarioGateway informeDiarioGateway = new InformeDiarioGateway();
-        List<InformeDiario> informeDiarios = informeDiarioGateway.getAll();
+        List<InformeDiario> informeDiarios = informeDiarioGateway.obterInformesDiarios();
         assertEquals(325850, informeDiarios.size());
 
     }

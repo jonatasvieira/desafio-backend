@@ -6,6 +6,6 @@ import com.ciandt.investment.core.domain.InformeDiario;
 
 public interface InformeDiarioBoundary {
 
-    List<InformeDiario> getAll();
+    List<InformeDiario> obterInformesDiarios();
     
 }

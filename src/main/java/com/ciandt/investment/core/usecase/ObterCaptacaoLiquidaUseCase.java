@@ -20,10 +20,10 @@ public class ObterCaptacaoLiquidaUseCase {
     public List<Fundo> obterDezMaioresFundos() {
     	
     	List<Fundo> fundos = new ArrayList<Fundo>();
-    	Map<String, List<InformeDiario>> groupedFundByCnpj = informeDiarioBoundary.getAll().stream().collect(Collectors.groupingBy(informeDiario -> informeDiario.getCnpj()));
+    	Map<String, List<InformeDiario>> fundosAgrupgadosPorCpnj = informeDiarioBoundary.obterInformesDiarios().stream().collect(Collectors.groupingBy(informeDiario -> informeDiario.getCnpj()));
     	
     	
-    	groupedFundByCnpj.entrySet().stream().forEach(informe -> {
+    	fundosAgrupgadosPorCpnj.entrySet().stream().forEach(informe -> {
     		Fundo fundo = new Fundo(informe.getKey());
     		informe.getValue().forEach(informeDiario -> {
     			fundo.setCaptacaoLiquida(fundo.getCaptacaoLiquida().add(informeDiario.getCaptacaoLiquida()));

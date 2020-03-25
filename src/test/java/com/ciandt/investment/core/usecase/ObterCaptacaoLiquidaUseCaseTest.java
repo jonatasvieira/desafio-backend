@@ -23,7 +23,7 @@ public class ObterCaptacaoLiquidaUseCaseTest {
     @Test
     public void deveObterOsDadosdeInformesDiario() {
 
-        List<InformeDiario> all = informeDiarioBoundary.getAll();
+        List<InformeDiario> all = informeDiarioBoundary.obterInformesDiarios();
         Assert.assertEquals(325850, all.size());
     }
     

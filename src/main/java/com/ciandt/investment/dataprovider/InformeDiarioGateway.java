@@ -18,7 +18,7 @@ public class InformeDiarioGateway implements InformeDiarioBoundary {
     private static final int HEADER_LINE = 1;
 
     @Override
-    public List<InformeDiario> getAll() {
+    public List<InformeDiario> obterInformesDiarios() {
 
         try {
 
